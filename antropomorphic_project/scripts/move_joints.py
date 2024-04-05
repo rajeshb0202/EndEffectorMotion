@@ -2,14 +2,14 @@
 import rospy
 from std_msgs.msg import Float64
 import time
-​
+
+
 """
 Topics To Write on:
 type: std_msgs/Float64
 /antropomorphic_arm/joint1_position_controller/command
 /antropomorphic_arm/joint2_position_controller/command
 /antropomorphic_arm/joint3_position_controller/command
-​
 """
 
 class JointMover(object):
@@ -22,6 +22,7 @@ class JointMover(object):
                                                             queue_size=1)
         self.pub_joint2 = rospy.Publisher('/antropomorphic_arm/joint2_position_controller/command',
                                                              Float64,
+                                          
                                                              queue_size=1)
         self.pub_joint3 = rospy.Publisher('/antropomorphic_arm/joint3_position_controller/command',
                                                            Float64,
